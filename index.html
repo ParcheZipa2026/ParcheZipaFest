@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PARCHE ZIPA FEST 2026 — Semana de la Juventud de Zipaquirá. 9 actividades del 18 al 26 de septiembre. Arte, gaming, emprendimiento, deporte y más.">
+  <meta name="theme-color" content="#1E2124">
+  <meta property="og:title" content="PARCHE ZIPA FEST 2026 — Semana de la Juventud">
+  <meta property="og:description" content="Zipaquirá se activa. 9 días de arte, gaming, emprendimiento, cultura y mucho más.">
+  <meta property="og:type" content="website">
+  <title>PARCHE ZIPA FEST 2026 — Semana de la Juventud | Zipaquirá</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAV
+══════════════════════════════════════════ -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-mark">PZF</div>
+        <div class="nav-logo-text">
+          <span>PARCHE ZIPA FEST</span>
+          <span>Semana de la Juventud 2026</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#cronograma">Cronograma</a></li>
+        <li><a href="#video-section">Video</a></li>
+        <li><a href="#inscripcion">Inscríbete</a></li>
+        <li><a href="#inscripcion" class="nav-cta">¡Participa!</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="nav-mobile" id="navMobile">
+  <a href="#cronograma">Cronograma</a>
+  <a href="#video-section">Video</a>
+  <a href="#inscripcion">Inscríbete</a>
+  <a href="#inscripcion" class="nav-cta-mobile btn-sticker">¡PARTICIPA!</a>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-glow hero-bg-glow-1"></div>
+    <div class="hero-bg-glow hero-bg-glow-2"></div>
+    <div class="hero-bg-glow hero-bg-glow-3"></div>
+  </div>
+
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Texto -->
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          Zipaquirá · Septiembre 2026
+        </div>
+
+        <h1 class="hero-title display">
+          <span class="line-green">PARCHE</span>
+          <span class="line-white">ZIPA</span>
+          <span class="line-outline">FEST</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          <strong>Semana de la Juventud 2026</strong><br>
+          Programa de Juventudes · Secretaría de Familia y Desarrollo Social
+        </p>
+
+        <p class="hero-tagline">
+          Zipaquirá <span class="highlight">se activa.</span>
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#cronograma" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect x="2" y="4" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M6 2v4M12 2v4M2 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Ver Cronograma
+          </a>
+          <a href="#inscripcion" class="btn btn-secondary">
+            Inscríbete →
+          </a>
+        </div>
+
+        <!-- Cuenta regresiva -->
+        <div class="hero-countdown">
+          <span class="countdown-label">Faltan</span>
+          <div class="countdown-units">
+            <div class="countdown-unit">
+              <span class="countdown-num" id="cd-days">--</span>
+              <span class="countdown-lbl">Días</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-num" id="cd-hours">--</span>
+              <span class="countdown-lbl">Horas</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-num" id="cd-mins">--</span>
+              <span class="countdown-lbl">Min</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-num" id="cd-secs">--</span>
+              <span class="countdown-lbl">Seg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual / Logo -->
+      <div class="hero-visual">
+        <div class="hero-logo-container">
+          <!-- Logo SVG inline: PARCHE ZIPA FEST 2026 -->
+          <svg class="hero-logo-svg" viewBox="0 0 480 500" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <defs>
+              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+              <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+                <feDropShadow dx="4" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+              </filter>
+              <!-- Gradients -->
+              <linearGradient id="gGreen" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#7AEB79"/>
+                <stop offset="100%" stop-color="#3DC93C"/>
+              </linearGradient>
+              <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#38B8FF"/>
+                <stop offset="100%" stop-color="#0080D4"/>
+              </linearGradient>
+              <linearGradient id="gOrange" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FFBE3D"/>
+                <stop offset="100%" stop-color="#E8870A"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Fondo oval decorativo -->
+            <ellipse cx="240" cy="250" rx="220" ry="230" fill="rgba(96,227,95,0.04)" stroke="rgba(96,227,95,0.12)" stroke-width="1"/>
+
+            <!-- "PARCHE" — texto principal con estilo bubble -->
+            <!-- Sombra/stroke blanco -->
+            <text x="240" y="140" text-anchor="middle"
+              font-family="Anton, sans-serif" font-size="86" letter-spacing="2"
+              fill="white" filter="url(#shadow)" opacity="0.9">PARCHE</text>
+            <!-- Relleno verde -->
+            <text x="240" y="140" text-anchor="middle"
+              font-family="Anton, sans-serif" font-size="86" letter-spacing="2"
+              fill="url(#gGreen)" stroke="white" stroke-width="3" paint-order="stroke">PARCHE</text>
+
+            <!-- "ZIPA" — azul + grande -->
+            <text x="240" y="232" text-anchor="middle"
+              font-family="Anton, sans-serif" font-size="110" letter-spacing="-2"
+              fill="white" filter="url(#shadow)" opacity="0.9">ZIPA</text>
+            <text x="240" y="232" text-anchor="middle"
+              font-family="Anton, sans-serif" font-size="110" letter-spacing="-2"
+              fill="url(#gBlue)" stroke="white" stroke-width="3.5" paint-order="stroke">ZIPA</text>
+
+            <!-- Decoración estrella izq -->
+            <text x="18" y="200" font-size="28" fill="#F49F22" opacity="0.9">★</text>
+            <!-- Decoración estrella der -->
+            <text x="438" y="200" font-size="28" fill="#F91264" opacity="0.9">★</text>
+
+            <!-- Separador línea -->
+            <rect x="80" y="248" width="320" height="3" rx="2" fill="rgba(255,255,255,0.15)"/>
+
+            <!-- "FEST" — outline estilo graffiti -->
+            <text x="240" y="330" text-anchor="middle"
+              font-family="Anton, sans-serif" font-size="96" letter-spacing="4"
+              fill="white" filter="url(#shadow)" opacity="0.9">FEST</text>
+            <text x="240" y="330" text-anchor="middle"
+              font-family="Anton, sans-serif" font-size="96" letter-spacing="4"
+              fill="none" stroke="white" stroke-width="4" paint-order="stroke"/>
+            <text x="240" y="330" text-anchor="middle"
+              font-family="Anton, sans-serif" font-size="96" letter-spacing="4"
+              fill="url(#gOrange)" stroke="white" stroke-width="3.5" paint-order="stroke">FEST</text>
+
+            <!-- Separador línea 2 -->
+            <rect x="120" y="348" width="240" height="2" rx="2" fill="rgba(255,255,255,0.1)"/>
+
+            <!-- "SEMANA DE LA JUVENTUD" -->
+            <text x="240" y="380" text-anchor="middle"
+              font-family="Barlow Condensed, sans-serif" font-size="19" font-weight="800" letter-spacing="3"
+              fill="rgba(255,255,255,0.6)" text-transform="uppercase">SEMANA DE LA JUVENTUD</text>
+
+            <!-- "2026" destacado -->
+            <text x="240" y="430" text-anchor="middle"
+              font-family="Anton, sans-serif" font-size="52" letter-spacing="6"
+              fill="url(#gGreen)" stroke="rgba(96,227,95,0.3)" stroke-width="1">2026</text>
+
+            <!-- Puntos decorativos -->
+            <circle cx="95"  cy="430" r="5" fill="#F91264" opacity="0.8"/>
+            <circle cx="385" cy="430" r="5" fill="#04A0F5" opacity="0.8"/>
+            <circle cx="75"  cy="415" r="3" fill="#F49F22" opacity="0.6"/>
+            <circle cx="405" cy="415" r="3" fill="#4701EF" opacity="0.6"/>
+
+            <!-- Sticker decorativo bottom -->
+            <rect x="160" y="455" width="160" height="28" rx="14" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <text x="240" y="474" text-anchor="middle"
+              font-family="Barlow Condensed, sans-serif" font-size="13" font-weight="700" letter-spacing="2"
+              fill="rgba(255,255,255,0.4)">ZIPAQUIRÁ · COLOMBIA</text>
+          </svg>
+
+          <!-- Rings decorativos -->
+          <div class="hero-logo-ring"></div>
+          <div class="hero-logo-ring hero-logo-ring-2"></div>
+
+          <!-- Badges flotantes -->
+          <div class="hero-badge hero-badge-1">🗓️ 18–26 SEP</div>
+          <div class="hero-badge hero-badge-2">9 ACTIVIDADES</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     STATS BAND
+══════════════════════════════════════════ -->
+<div style="background:#252A2F;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);padding:20px 0;position:relative;z-index:1;">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;overflow-x:auto;">
+      <div style="display:flex;align-items:center;gap:12px;white-space:nowrap;">
+        <span style="font-family:var(--font-display);font-size:32px;color:var(--col-green);">9</span>
+        <span style="font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--col-muted);">Actividades</span>
+      </div>
+      <div style="width:1px;height:32px;background:rgba(255,255,255,0.08);"></div>
+      <div style="display:flex;align-items:center;gap:12px;white-space:nowrap;">
+        <span style="font-family:var(--font-display);font-size:32px;color:var(--col-blue);">9</span>
+        <span style="font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--col-muted);">Días de Parche</span>
+      </div>
+      <div style="width:1px;height:32px;background:rgba(255,255,255,0.08);"></div>
+      <div style="display:flex;align-items:center;gap:12px;white-space:nowrap;">
+        <span style="font-family:var(--font-display);font-size:32px;color:var(--col-orange);">∞</span>
+        <span style="font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--col-muted);">Energía Juvenil</span>
+      </div>
+      <div style="width:1px;height:32px;background:rgba(255,255,255,0.08);"></div>
+      <div style="display:flex;align-items:center;gap:12px;white-space:nowrap;">
+        <span style="font-family:var(--font-display);font-size:32px;color:var(--col-pink);">1</span>
+        <span style="font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--col-muted);">Sola Ciudad</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     CRONOGRAMA
+══════════════════════════════════════════ -->
+<section id="cronograma" class="section" style="position:relative;overflow:hidden;">
+  <span class="section-deco" style="top:0;right:-40px;color:var(--col-green);">SCHEDULE</span>
+
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Cronograma Oficial</div>
+      <h2 class="section-title">9 días de<br><span>PARCHE</span></h2>
+      <p class="section-desc">18 al 26 de septiembre de 2026 · Zipaquirá, Cundinamarca</p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">Todas</button>
+      <button class="filter-btn" data-filter="arte" style="--hover-color:#F91264">Arte & Cultura</button>
+      <button class="filter-btn" data-filter="gaming">Gaming</button>
+      <button class="filter-btn" data-filter="emprendimiento">Emprendimiento</button>
+      <button class="filter-btn" data-filter="deporte">Deporte</button>
+      <button class="filter-btn" data-filter="participacion">Participación</button>
+      <button class="filter-btn" data-filter="entretenimiento">Entretenimiento</button>
+    </div>
+
+    <!-- Grid de tarjetas -->
+    <div class="actividades-grid reveal-stagger" id="actividadesGrid">
+      <!-- Poblado por JS -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     VIDEO
+══════════════════════════════════════════ -->
+<section id="video-section" class="section" style="position:relative;">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Video Oficial</div>
+      <h2 class="section-title">Esto apenas<br><span>comienza...</span></h2>
+    </div>
+
+    <div class="video-container reveal">
+      <div class="video-sticker video-sticker-1">🔥 OFICIAL 2026</div>
+      <div class="video-sticker video-sticker-2">🎬 PARCHE ZIPA FEST</div>
+
+      <div class="video-screen">
+        <!-- El iframe se activa cuando se configura VIDEO_URL en config.js -->
+        <iframe id="videoFrame"
+          style="display:none;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+
+        <!-- Placeholder mientras se configura el video -->
+        <div class="video-placeholder" id="videoPlaceholder">
+          <div class="video-play-btn">▶</div>
+          <p style="font-family:var(--font-display);font-size:22px;color:var(--col-white);letter-spacing:0.05em;">VIDEO PRÓXIMAMENTE</p>
+          <p style="font-family:var(--font-body);font-size:13px;color:var(--col-muted);">Configura VIDEO_URL en js/config.js</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Redes sociales -->
+    <div style="text-align:center;margin-top:48px;" class="reveal">
+      <p style="font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--col-muted);margin-bottom:20px;">Síguenos en redes</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="#" class="social-btn social-instagram" title="Instagram">📷</a>
+        <a href="#" class="social-btn social-tiktok" title="TikTok">🎵</a>
+        <a href="#" class="social-btn social-facebook" title="Facebook">📘</a>
+        <a href="#" class="social-btn social-youtube" title="YouTube">▶️</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     INSCRIPCIÓN / FORMULARIO
+══════════════════════════════════════════ -->
+<section id="inscripcion" class="section" style="background:var(--col-bg-soft);position:relative;overflow:hidden;">
+  <span class="section-deco" style="bottom:0;left:-60px;color:var(--col-blue);opacity:0.025;">FORM</span>
+
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Participa</div>
+      <h2 class="section-title">¡Regístrate<br><span>aquí!</span></h2>
+      <p class="section-desc">Completa el formulario para inscribirte en tu actividad favorita</p>
+    </div>
+
+    <div class="form-container reveal">
+
+      <!-- Banner de actividad seleccionada -->
+      <div class="form-activity-banner">
+        <p class="form-activity-label">Estás haciendo parte de:</p>
+        <p class="form-activity-name" id="formActivityName">Selecciona una actividad del cronograma</p>
+      </div>
+
+      <!-- Formulario -->
+      <div id="formContent">
+        <form id="inscripcionForm">
+          <input type="hidden" id="formActivityId" name="actividad" value="">
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="primerNombre">Primer Nombre *</label>
+              <input class="form-input" type="text" id="primerNombre" name="primerNombre" required placeholder="Tu primer nombre">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="segundoNombre">Segundo Nombre</label>
+              <input class="form-input" type="text" id="segundoNombre" name="segundoNombre" placeholder="Segundo nombre (opcional)">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="primerApellido">Primer Apellido *</label>
+              <input class="form-input" type="text" id="primerApellido" name="primerApellido" required placeholder="Tu primer apellido">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="segundoApellido">Segundo Apellido</label>
+              <input class="form-input" type="text" id="segundoApellido" name="segundoApellido" placeholder="Segundo apellido">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="documento">Número de Documento *</label>
+              <input class="form-input" type="text" id="documento" name="documento" required placeholder="CC / TI / Pasaporte">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="telefono">Teléfono / Celular *</label>
+              <input class="form-input" type="tel" id="telefono" name="telefono" required placeholder="3XX XXX XXXX">
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="correo">Correo Electrónico *</label>
+              <input class="form-input" type="email" id="correo" name="correo" required placeholder="tucorreo@ejemplo.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edad">Edad *</label>
+              <input class="form-input" type="number" id="edad" name="edad" required min="10" max="100" placeholder="Tu edad">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="genero">Género *</label>
+              <select class="form-select" id="genero" name="genero" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="no-binario">No binario</option>
+                <option value="otro">Otro</option>
+                <option value="prefiero-no-decir">Prefiero no decir</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="grupoPoblacional">Grupo Poblacional</label>
+              <select class="form-select" id="grupoPoblacional" name="grupoPoblacional">
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="ninguno">Ninguno</option>
+                <option value="victima">Víctima del conflicto</option>
+                <option value="discapacidad">Persona con discapacidad</option>
+                <option value="indigena">Indígena</option>
+                <option value="afrodescendiente">Afrodescendiente</option>
+                <option value="lgtbiq">LGTBIQ+</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="zonaResidencia">Zona de Residencia *</label>
+              <select class="form-select" id="zonaResidencia" name="zonaResidencia" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="urbana">Zona Urbana</option>
+                <option value="rural">Zona Rural</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="eps">EPS</label>
+              <input class="form-input" type="text" id="eps" name="eps" placeholder="Nombre de tu EPS">
+            </div>
+          </div>
+
+          <!-- Autorización datos personales -->
+          <div class="form-auth">
+            <h4>📋 Autorización de Tratamiento de Datos Personales</h4>
+            <div class="form-auth-text">
+              En cumplimiento de la Ley 1581 de 2012 y el Decreto 1377 de 2013 sobre Protección de Datos Personales, el Programa de Juventudes de la Secretaría de Familia y Desarrollo Social de la Alcaldía de Zipaquirá solicita su autorización para el tratamiento de los datos personales suministrados en este formulario. Los datos serán utilizados exclusivamente para: (i) el registro y gestión de su participación en la Semana de la Juventud 2026 - PARCHE ZIPA FEST; (ii) comunicación relacionada con las actividades del evento; (iii) elaboración de estadísticas e informes institucionales. Los datos serán tratados con plenas garantías de seguridad y confidencialidad, y no serán cedidos a terceros sin su autorización expresa. Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos personales, así como a revocar la autorización otorgada, comunicándose a juventudes@zipaquira.gov.co. El responsable del tratamiento es la Alcaldía Municipal de Zipaquirá, con domicilio en Cra. 7 # 3-27, Zipaquirá, Cundinamarca.
+            </div>
+            <div class="form-radio-group">
+              <label class="form-radio-opt">
+                <input type="radio" name="autorizaDatos" value="si" required>
+                ✅ Sí, autorizo
+              </label>
+              <label class="form-radio-opt">
+                <input type="radio" name="autorizaDatos" value="no">
+                ❌ No, no autorizo
+              </label>
+            </div>
+          </div>
+
+          <!-- Autorización uso de imagen -->
+          <div class="form-auth" style="border-color:rgba(4,160,245,0.2);">
+            <h4 style="color:var(--col-blue);">📸 Autorización de Uso de Imagen</h4>
+            <div class="form-auth-text">
+              Autorizo al Programa de Juventudes de la Secretaría de Familia y Desarrollo Social de la Alcaldía de Zipaquirá para el uso y reproducción de mi imagen, voz y nombre, captados durante las actividades de la Semana de la Juventud 2026 - PARCHE ZIPA FEST. Dicha autorización comprende la publicación en redes sociales oficiales, medios de comunicación, material institucional impreso y digital, con fines exclusivamente institucionales y de divulgación del evento, sin que ello implique remuneración alguna. Esta autorización tiene carácter voluntario y puede ser revocada en cualquier momento comunicándose al correo juventudes@zipaquira.gov.co.
+            </div>
+            <div class="form-radio-group">
+              <label class="form-radio-opt">
+                <input type="radio" name="autorizaImagen" value="si">
+                ✅ Sí, autorizo
+              </label>
+              <label class="form-radio-opt">
+                <input type="radio" name="autorizaImagen" value="no">
+                ❌ No autorizo
+              </label>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div style="text-align:center;margin-top:32px;">
+            <button type="submit" class="btn btn-primary btn-sticker" id="formSubmitBtn" style="font-size:18px;padding:18px 48px;min-width:240px;">
+              <span class="btn-text">🚀 ¡ME APUNTO!</span>
+              <span class="btn-loader" style="display:none;">Enviando...</span>
+            </button>
+            <p style="margin-top:12px;font-size:12px;color:var(--col-muted);">
+              Recibirás confirmación por correo electrónico
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Estado de éxito -->
+      <div id="formSuccess" style="display:none;text-align:center;padding:48px 24px;">
+        <div style="font-size:72px;margin-bottom:24px;">🎉</div>
+        <h3 style="font-family:var(--font-display);font-size:36px;color:var(--col-green);margin-bottom:12px;letter-spacing:0.02em;">¡LISTO, PARCERO!</h3>
+        <p style="color:var(--col-muted);font-size:16px;margin-bottom:32px;line-height:1.6;">Tu inscripción fue registrada correctamente.<br>Revisa tu correo para más información.</p>
+        <a href="#cronograma" class="btn btn-secondary">Ver otras actividades →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">PARCHE ZIPA FEST</div>
+        <p class="footer-tagline">
+          Semana de la Juventud 2026<br>
+          Programa de Juventudes · Secretaría de Familia<br>
+          y Desarrollo Social de Zipaquirá
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn social-instagram" title="Instagram">📷</a>
+          <a href="#" class="social-btn social-tiktok" title="TikTok">🎵</a>
+          <a href="#" class="social-btn social-facebook" title="Facebook">📘</a>
+          <a href="#" class="social-btn social-youtube" title="YouTube">▶️</a>
+        </div>
+      </div>
+
+      <!-- Actividades -->
+      <div>
+        <p class="footer-col-title">Actividades</p>
+        <ul class="footer-links">
+          <li><a href="#cronograma" onclick="void(0)">Mural On — 18 Sep</a></li>
+          <li><a href="#cronograma">ExpresArte — 21 Sep</a></li>
+          <li><a href="#cronograma">Youth Squad Game — 22 Sep</a></li>
+          <li><a href="#cronograma">Parche Gamer — 22 Sep</a></li>
+          <li><a href="#cronograma">Level Up 2026 — 23 Sep</a></li>
+          <li><a href="#cronograma">Mural Fit Fest — 24 Sep</a></li>
+          <li><a href="#cronograma">Colegios Con Flow — 25 Sep</a></li>
+          <li><a href="#cronograma">Business Lab — 25 Sep</a></li>
+          <li><a href="#cronograma">Parche Bajo Las Estrellas — 26 Sep</a></li>
+        </ul>
+      </div>
+
+      <!-- Info -->
+      <div>
+        <p class="footer-col-title">Información</p>
+        <ul class="footer-links">
+          <li><a href="#inscripcion">Inscríbete</a></li>
+          <li><a href="#video-section">Video Oficial</a></li>
+          <li><a href="mailto:juventudes@zipaquira.gov.co">juventudes@zipaquira.gov.co</a></li>
+          <li><a href="https://www.zipaquira.gov.co" target="_blank">Alcaldía de Zipaquirá</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 <strong>PARCHE ZIPA FEST</strong> · Semana de la Juventud · Zipaquirá, Cundinamarca</p>
+      <p>Secretaría de Familia y Desarrollo Social · Programa de Juventudes</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════
+     MODAL ACTIVIDAD
+══════════════════════════════════════════ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+
+    <div class="modal-hero" id="modalHero">
+      <span id="modalIcon" style="font-size:72px;">🎨</span>
+    </div>
+
+    <div class="modal-body">
+      <div class="card-status" id="modalStatus" style="display:inline-flex;margin-bottom:12px;"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <p class="modal-full-name" id="modalFullName"></p>
+
+      <div class="modal-info-grid">
+        <div class="modal-info-item">
+          <div class="modal-info-label">📅 Fecha</div>
+          <div class="modal-info-value" id="modalDate">—</div>
+        </div>
+        <div class="modal-info-item">
+          <div class="modal-info-label">🕐 Hora</div>
+          <div class="modal-info-value" id="modalTime">Por definir</div>
+        </div>
+        <div class="modal-info-item">
+          <div class="modal-info-label">📍 Lugar</div>
+          <div class="modal-info-value" id="modalLocation">Por definir</div>
+        </div>
+        <div class="modal-info-item">
+          <div class="modal-info-label">👥 Público</div>
+          <div class="modal-info-value" id="modalAudience">—</div>
+        </div>
+        <div class="modal-info-item">
+          <div class="modal-info-label">🏷️ Categoría</div>
+          <div class="modal-info-value" id="modalCat">—</div>
+        </div>
+      </div>
+
+      <p class="modal-desc" id="modalDesc"></p>
+
+      <div style="margin-bottom:24px;">
+        <h4 style="font-family:var(--font-heading);font-size:13px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--col-white);margin-bottom:10px;">📋 Requisitos</h4>
+        <p style="font-size:15px;color:var(--col-muted);line-height:1.6;" id="modalReqs">Por definir</p>
+      </div>
+
+      <!-- Fases (Mural On, Colegios) -->
+      <div id="modalPhases" style="display:none;margin-bottom:24px;">
+        <h4 style="font-family:var(--font-heading);font-size:13px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--col-white);margin-bottom:16px;">🗺️ Proceso</h4>
+      </div>
+
+      <!-- Google Maps -->
+      <div id="modalMaps" style="margin-bottom:24px;"></div>
+
+      <!-- CTA -->
+      <div style="text-align:center;">
+        <a href="#inscripcion" class="btn btn-primary btn-sticker" id="modalInscBtn" style="font-size:16px;">
+          🚀 ¡ME APUNTO!
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     TOAST
+══════════════════════════════════════════ -->
+<div class="toast" id="toast"></div>
+
+
+<!-- ══════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════ -->
+<script src="js/config.js"></script>
+<script src="data/actividades.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
