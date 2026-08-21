@@ -348,7 +348,7 @@ a{color:inherit;text-decoration:none}
 <div class="stats-band">
   <div class="container">
     <div class="stats-inner">
-      <div class="stat-item"><span class="stat-num" style="color:var(--orange)">9</span><span class="stat-lbl">Días de Parche</span></div>
+      <div class="stat-item"><span class="stat-num" style="color:var(--orange)">9</span><span class="stat-lbl">Actividades para Parchar</span></div>
       <div class="stat-div"></div>
       <div class="stat-item"><span class="stat-num" style="color:var(--blue)">9</span><span class="stat-lbl">Actividades para Romperla</span></div>
 
@@ -359,11 +359,7 @@ a{color:inherit;text-decoration:none}
 <!-- CRONOGRAMA -->
 <section id="cronograma" class="section">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="sec-eyebrow">Cronograma Oficial</div>
-      <h2 class="sec-title">9 días de<br><span>PARCHE</span></h2>
-      <p class="sec-desc">18 al 26 de septiembre de 2026 · Zipaquirá, Cundinamarca</p>
-    </div>
+
     <div id="cronogramaContainer" class="reveal"></div>
   </div>
 </section>
@@ -372,19 +368,21 @@ a{color:inherit;text-decoration:none}
 <section id="video-section" class="section">
   <div class="container">
     <div class="section-header reveal">
-      <div class="sec-eyebrow">Video Oficial</div>
-      <h2 class="sec-title">Esto apenas<br><span>comienza...</span></h2>
+      <div class="sec-eyebrow">Cronograma Oficial</div>
+      <h2 class="sec-title">9 días de<br><span>PARCHE</span></h2>
+      <p class="sec-desc">18 al 26 de septiembre de 2026 · Zipaquirá, Cundinamarca</p>
     </div>
     <div class="video-wrap reveal">
       <div class="v-sticker vs1">🔥 OFICIAL 2026</div>
       <div class="v-sticker vs2">🎬 PARCHE ZIPA FEST</div>
       <div class="video-screen">
-        <iframe id="videoFrame" style="display:none" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-        <div class="video-ph" id="videoPh">
-          <div class="vplay">▶</div>
-          <p style="font-family:var(--font-d);font-size:20px;color:var(--white);letter-spacing:.05em">VIDEO PRÓXIMAMENTE</p>
-          <p style="font-size:12px;color:var(--muted)">Configura VIDEO_URL en el script</p>
-        </div>
+        <iframe
+          src="https://www.youtube.com/embed/rhVY-NbKNl4"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="width:100%;height:100%;display:block;"
+        ></iframe>
       </div>
     </div>
     <div style="text-align:center;margin-top:44px" class="reveal">
@@ -928,12 +926,7 @@ mobile?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{toggle.
   document.querySelector(".hero-bg")?.appendChild(el);
 });
 
-// VIDEO
-if(VIDEO_URL&&!VIDEO_URL.includes("TU_VIDEO_ID")){
-  const f=document.getElementById("videoFrame"),ph=document.getElementById("videoPh");
-  if(f){f.src=VIDEO_URL;f.style.display="block";}
-  if(ph)ph.style.display="none";
-}
+// Video: ParcheZipa2026.mp4 (archivo local)
 
 // SOCIALS & WHATSAPP
 document.querySelectorAll(".soc-ig").forEach(e=>e.href=INSTAGRAM);
