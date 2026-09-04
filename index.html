@@ -269,6 +269,23 @@ a{color:inherit;text-decoration:none}
   .modal-ctas{flex-direction:column}
   .insc-title{font-size:30px}
 }
+
+#asistireOverlay{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:2100;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(12px)}
+#asistireOverlay.open{opacity:1;pointer-events:auto}
+#asistireBox{background:var(--bg2);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);max-width:480px;width:100%;position:relative;transform:translateY(20px) scale(.97);transition:transform .3s;overflow:hidden}
+#asistireOverlay.open #asistireBox{transform:translateY(0) scale(1)}
+.asistire-header{background:linear-gradient(135deg,var(--bg3),rgba(244,160,32,.08));padding:28px 28px 20px;border-bottom:1px solid rgba(255,255,255,.07);position:relative}
+.asistire-header::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--orange),var(--red))}
+.asistire-close{position:absolute;top:14px;right:14px;width:34px;height:34px;background:rgba(255,255,255,.08);border:none;border-radius:50%;cursor:pointer;font-size:16px;color:var(--white);display:flex;align-items:center;justify-content:center;transition:background .3s}
+.asistire-close:hover{background:rgba(255,255,255,.18)}
+.asistire-act-name{font-family:var(--font-d);font-size:22px;color:var(--orange);letter-spacing:.02em;margin-top:4px}
+.asistire-body{padding:24px 28px 28px;display:flex;flex-direction:column;gap:14px}
+.a-label{font-family:var(--font-h);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.a-input{background:var(--bg3);border:2px solid rgba(255,255,255,.08);border-radius:var(--r-md);padding:12px 16px;font-family:var(--font-b);font-size:15px;color:var(--white);outline:none;transition:border-color .3s;width:100%}
+.a-input:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(244,160,32,.1)}
+.a-input::placeholder{color:rgba(255,255,255,.2)}
+@media(max-width:480px){.asistire-body{padding:20px}}
+
 </style>
 </head>
 <body>
@@ -356,48 +373,6 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 
-<!-- CRONOGRAMA -->
-<section id="cronograma" class="section">
-  <div class="container">
-
-    <div id="cronogramaContainer" class="reveal"></div>
-  </div>
-</section>
-
-<!-- VIDEO -->
-<section id="video-section" class="section">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="sec-eyebrow">Cronograma Oficial</div>
-      <h2 class="sec-title">9 días de<br><span>PARCHE</span></h2>
-      <p class="sec-desc">18 al 26 de septiembre de 2026 · Zipaquirá, Cundinamarca</p>
-    </div>
-    <div class="video-wrap reveal">
-      <div class="v-sticker vs1">🔥 OFICIAL 2026</div>
-      <div class="v-sticker vs2">🎬 PARCHE ZIPA FEST</div>
-      <div class="video-screen">
-        <iframe
-          src="https://www.youtube.com/embed/rhVY-NbKNl4"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          style="width:100%;height:100%;display:block;"
-        ></iframe>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:44px" class="reveal">
-      <p style="font-family:var(--font-h);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">Síguenos en redes</p>
-      <div class="socials">
-        <a href="#" class="social-btn soc-ig" title="Instagram">📷</a>
-        <a href="#" class="social-btn soc-tt" title="TikTok">🎵</a>
-        <a href="#" class="social-btn soc-fb" title="Facebook">📘</a>
-        <a href="#" class="social-btn soc-yt" title="YouTube">▶️</a>
-        <a href="#" class="social-btn soc-wa" title="WhatsApp">💬</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CONCURSOS -->
 <section id="concursos" class="section" style="background:var(--bg2);position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(96,227,95,.05) 0%,transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(240,16,112,.05) 0%,transparent 60%);pointer-events:none;"></div>
@@ -449,8 +424,12 @@ a{color:inherit;text-decoration:none}
               <span style="font-family:var(--font-h);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:rgba(255,255,255,.05);color:var(--muted);border:1px solid rgba(255,255,255,.1);">5. Votación</span>
             </div>
           </div>
-          <div style="margin-top:auto;padding-top:8px;">
-            <a href="https://forms.gle/vLcsF3ooxSHasnzG6" target="_blank" class="btn btn-green" style="width:100%;justify-content:center;font-size:16px;">
+          <div style="background:rgba(250,51,8,.10);border:1px solid rgba(250,51,8,.3);border-radius:var(--r-md);padding:11px 14px;display:flex;flex-direction:column;gap:6px;margin-top:4px;">
+            <div style="display:flex;align-items:center;gap:8px;"><span>⏳</span><span style="font-family:var(--font-h);font-size:12px;font-weight:700;color:#FA3308;">INSCRIPCIONES hasta el 6 de septiembre</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span>🗳️</span><span style="font-family:var(--font-h);font-size:12px;font-weight:700;color:var(--orange);">VOTACIONES: 7 al 14 de septiembre</span></div>
+          </div>
+          <div style="margin-top:8px;">
+            <a href="https://forms.gle/ijVEzj5hJWQ1znVR7" target="_blank" class="btn btn-green" style="width:100%;justify-content:center;font-size:16px;">
               📝 INSCRIBIRME
             </a>
           </div>
@@ -494,8 +473,12 @@ a{color:inherit;text-decoration:none}
               <span style="font-family:var(--font-h);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:rgba(255,255,255,.05);color:var(--muted);border:1px solid rgba(255,255,255,.1);">4. Votación redes</span>
             </div>
           </div>
-          <div style="margin-top:auto;padding-top:8px;">
-            <a href="https://forms.gle/vsF3fU8vCNVfm9Pa7" target="_blank" class="btn btn-blue" style="width:100%;justify-content:center;font-size:16px;">
+          <div style="background:rgba(45,184,245,.10);border:1px solid rgba(45,184,245,.3);border-radius:var(--r-md);padding:11px 14px;display:flex;flex-direction:column;gap:6px;margin-top:4px;">
+            <div style="display:flex;align-items:center;gap:8px;"><span>🟢</span><span style="font-family:var(--font-h);font-size:12px;font-weight:700;color:var(--green);">INSCRIPCIONES hasta el 14 de septiembre</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span>🗳️</span><span style="font-family:var(--font-h);font-size:12px;font-weight:700;color:var(--blue);">VOTACIONES: 15 al 20 de septiembre</span></div>
+          </div>
+          <div style="margin-top:8px;">
+            <a href="https://forms.gle/3H5JzAJZfLhUX6fn8" target="_blank" class="btn btn-blue" style="width:100%;justify-content:center;font-size:16px;">
               📝 INSCRIBIR MI COLEGIO
             </a>
           </div>
@@ -543,18 +526,60 @@ a{color:inherit;text-decoration:none}
           <div style="background:rgba(250,51,8,.12);border:1px solid rgba(250,51,8,.35);border-radius:var(--r-md);padding:12px 16px;display:flex;align-items:center;gap:10px;">
             <span style="font-size:20px;flex-shrink:0;">⏳</span>
             <div>
-              <div style="font-family:var(--font-d);font-size:13px;color:#FA3308;letter-spacing:.04em;">PLAZO: 7 DE SEPTIEMBRE</div>
+              <div style="font-family:var(--font-d);font-size:13px;color:#FA3308;letter-spacing:.04em;">PLAZO POSTULACIÓN: 11 DE SEPTIEMBRE</div>
               <div style="font-size:11px;color:var(--muted);margin-top:1px;">Fase 1 — Solo postulación. Votación después.</div>
             </div>
           </div>
           <div style="margin-top:auto;padding-top:4px;" id="levelUpBtnArea">
-            <a href="https://forms.gle/AX2haTUL2QQ4foCe9" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;font-size:16px;">
+            <a href="https://forms.gle/wwgv5nZb16pKuXBw7" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;font-size:16px;">
               📝 POSTULARME AHORA
             </a>
           </div>
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- CRONOGRAMA -->
+<section id="cronograma" class="section">
+  <div class="container">
+
+    <div id="cronogramaContainer" class="reveal"></div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video-section" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="sec-eyebrow">Cronograma Oficial</div>
+      <h2 class="sec-title">9 días de<br><span>PARCHE</span></h2>
+      <p class="sec-desc">18 al 26 de septiembre de 2026 · Zipaquirá, Cundinamarca</p>
+    </div>
+    <div class="video-wrap reveal">
+      <div class="v-sticker vs1">🔥 OFICIAL 2026</div>
+      <div class="v-sticker vs2">🎬 PARCHE ZIPA FEST</div>
+      <div class="video-screen">
+        <iframe
+          src="https://www.youtube.com/embed/rhVY-NbKNl4"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="width:100%;height:100%;display:block;"
+        ></iframe>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <p style="font-family:var(--font-h);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">Síguenos en redes</p>
+      <div class="socials">
+        <a href="#" class="social-btn soc-ig" title="Instagram">📷</a>
+        <a href="#" class="social-btn soc-tt" title="TikTok">🎵</a>
+        <a href="#" class="social-btn soc-fb" title="Facebook">📘</a>
+        <a href="#" class="social-btn soc-yt" title="YouTube">▶️</a>
+        <a href="#" class="social-btn soc-wa" title="WhatsApp">💬</a>
+      </div>
     </div>
   </div>
 </section>
@@ -663,7 +688,7 @@ const ACTS = [
     requirements:"Por definir",
     targetAudience:"Jóvenes de 14 a 28 años",
     status:"open", registrationOpen:true,
-    inscripcionUrl:"https://forms.gle/vLcsF3ooxSHasnzG6",
+    inscripcionUrl:"https://forms.gle/ijVEzj5hJWQ1znVR7",
     specialProcess:"mural-on", accentColor:"#60E35F", icon:"🎨",
     phases:[
       {id:1,label:"Convocatoria",active:true},
@@ -729,10 +754,11 @@ const ACTS = [
     description:"Postúlate, nomina y vota por quienes merecen subir de nivel y ser reconocidos en los Premios Juventud 2026.",
     requirements:"Por definir",
     targetAudience:"Jóvenes de 14 a 28 años con impacto comunitario",
-    status:"upcoming", registrationOpen:false,
-    inscripcionUrl:"",
+    status:"open", registrationOpen:true,
+    inscripcionUrl:"https://forms.gle/wwgv5nZb16pKuXBw7",
+    registrationOpen:true,
     specialProcess:"level-up", accentColor:"#F4A020", icon:"🏆"
-  },
+  ,
   {
     id:"parchando-al-barrio", num:"06", name:"Parchados al Barrio",
     fullName:"Parchados al Barrio",
@@ -760,7 +786,7 @@ const ACTS = [
     requirements:"Por definir",
     targetAudience:"Estudiantes de colegios de Zipaquirá",
     status:"upcoming", registrationOpen:true,
-    inscripcionUrl:"https://forms.gle/vsF3fU8vCNVfm9Pa7",
+    inscripcionUrl:"https://forms.gle/3H5JzAJZfLhUX6fn8",
     specialProcess:"colegios-con-flow", accentColor:"#2DB8F5", icon:"🎵",
     phases:[
       {id:1,label:"Recepción videos",active:true},
@@ -837,7 +863,7 @@ function renderCronograma(){
           <p class="card-desc">${a.description}</p>
           <div class="card-cta-row">
             <div class="card-cta">Ver detalles →</div>
-          </div>
+            ${!["mural-on","colegios-con-flow","level-up"].includes(a.id)?`<button onclick="event.stopPropagation();openAsistire('${a.id}')" style="font-family:var(--font-h);font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:7px 13px;border-radius:6px;background:var(--orange);color:var(--bg);border:2px solid white;cursor:pointer;box-shadow:2px 2px 0 rgba(0,0,0,.3);white-space:nowrap">✅ ASISTIRÉ</button>`:""}\n          </div>
         </div>
       </div>`;
     });
@@ -962,6 +988,102 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
 
 renderCronograma();
 
+
+// ── ASISTIRÉ ─────────────────────────────────────────────────────────
+function openAsistire(actId) {
+  var a = ACTS.find(function(x){return x.id===actId;});
+  if(!a) return;
+  document.getElementById("asistireActId").value = actId;
+  document.getElementById("asistireActName").textContent = a.name;
+  document.getElementById("asistireActDate").textContent = a.dateLabel + " · " + a.time;
+  ["a-nombre","a-cc","a-tel","a-email"].forEach(function(id){document.getElementById(id).value="";});
+  document.getElementById("asistireFormBody").style.display = "flex";
+  document.getElementById("asistireSuccess").style.display = "none";
+  document.getElementById("asistireOverlay").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeAsistire() {
+  document.getElementById("asistireOverlay").classList.remove("open");
+  document.body.style.overflow = "";
+}
+document.getElementById("asistireOverlay").addEventListener("click", function(e){
+  if(e.target.id==="asistireOverlay") closeAsistire();
+});
+document.addEventListener("keydown", function(e){ if(e.key==="Escape") closeAsistire(); });
+
+async function submitAsistire() {
+  var nombre = document.getElementById("a-nombre").value.trim();
+  var cc     = document.getElementById("a-cc").value.trim();
+  var tel    = document.getElementById("a-tel").value.trim();
+  var email  = document.getElementById("a-email").value.trim();
+  var actId  = document.getElementById("asistireActId").value;
+  if(!nombre||!cc||!tel||!email){
+    ["a-nombre","a-cc","a-tel","a-email"].forEach(function(id){
+      var el=document.getElementById(id);
+      if(!el.value.trim()){el.style.borderColor="var(--red)";setTimeout(function(){el.style.borderColor="";},2000);}
+    });
+    return;
+  }
+  document.getElementById("asistireBtnText").style.display="none";
+  document.getElementById("asistireLoader").style.display="inline";
+  var data={tipo:"asistencia",actividad:actId,nombre:nombre,cc:cc,telefono:tel,correo:email,timestamp:new Date().toISOString()};
+  try {
+    var url="https://script.google.com/macros/s/TU_SCRIPT_ID/exec";
+    if(url&&!url.includes("TU_SCRIPT_ID")){
+      await fetch(url,{method:"POST",body:JSON.stringify(data),mode:"no-cors"});
+    }
+  } catch(e){}
+  document.getElementById("asistireFormBody").style.display="none";
+  document.getElementById("asistireSuccess").style.display="block";
+  document.getElementById("asistireBtnText").style.display="inline";
+  document.getElementById("asistireLoader").style.display="none";
+}
+
 </script>
+
+<!-- ASISTIRE MODAL -->
+<div id="asistireOverlay">
+  <div id="asistireBox">
+    <div class="asistire-header">
+      <button class="asistire-close" onclick="closeAsistire()">&#x2715;</button>
+      <div style="font-family:var(--font-h);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);">Confirmar asistencia</div>
+      <div class="asistire-act-name" id="asistireActName">Actividad</div>
+      <div id="asistireActDate" style="font-family:var(--font-h);font-size:13px;font-weight:600;color:var(--muted);margin-top:4px;"></div>
+    </div>
+    <div class="asistire-body" id="asistireFormBody">
+      <input type="hidden" id="asistireActId" value="">
+      <div>
+        <div class="a-label">Nombre completo *</div>
+        <input class="a-input" type="text" id="a-nombre" placeholder="Tu nombre y apellido">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div>
+          <div class="a-label">C&#233;dula / TI *</div>
+          <input class="a-input" type="text" id="a-cc" placeholder="N&#250;mero de documento">
+        </div>
+        <div>
+          <div class="a-label">Tel&#233;fono *</div>
+          <input class="a-input" type="tel" id="a-tel" placeholder="3XX XXX XXXX">
+        </div>
+      </div>
+      <div>
+        <div class="a-label">Correo electr&#243;nico *</div>
+        <input class="a-input" type="email" id="a-email" placeholder="tucorreo@ejemplo.com">
+      </div>
+      <button onclick="submitAsistire()" class="btn btn-primary" style="width:100%;justify-content:center;font-size:16px;margin-top:4px;">
+        <span id="asistireBtnText">&#x2705; CONFIRMAR ASISTENCIA</span>
+        <span id="asistireLoader" style="display:none">Enviando...</span>
+      </button>
+      <p style="font-size:11px;color:var(--muted);text-align:center;line-height:1.5;">Al registrarte aceptas el tratamiento de tus datos personales seg&#250;n la Ley 1581 de 2012.</p>
+    </div>
+    <div id="asistireSuccess" style="display:none;text-align:center;padding:32px 28px;">
+      <div style="font-size:60px;margin-bottom:16px;">&#127881;</div>
+      <h3 style="font-family:var(--font-d);font-size:28px;color:var(--green);margin-bottom:8px;letter-spacing:.02em;">&#161;TE ESPERAMOS!</h3>
+      <p style="font-size:15px;color:var(--muted);line-height:1.6;margin-bottom:24px;">Tu asistencia fue confirmada.<br>&#161;El parche te espera!</p>
+      <button onclick="closeAsistire()" class="btn btn-secondary">Cerrar</button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
