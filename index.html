@@ -863,7 +863,8 @@ function renderCronograma(){
           <p class="card-desc">${a.description}</p>
           <div class="card-cta-row">
             <div class="card-cta">Ver detalles →</div>
-            ${!["mural-on","colegios-con-flow","level-up"].includes(a.id)?`<button onclick="event.stopPropagation();openAsistire('${a.id}')" style="font-family:var(--font-h);font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:7px 13px;border-radius:6px;background:var(--orange);color:var(--bg);border:2px solid white;cursor:pointer;box-shadow:2px 2px 0 rgba(0,0,0,.3);white-space:nowrap">✅ ASISTIRÉ</button>`:""}\n          </div>
+            ${!["mural-on","colegios-con-flow","level-up"].includes(a.id)?`<button onclick="event.stopPropagation();openAsistire('${a.id}')" style="font-family:var(--font-h);font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:7px 13px;border-radius:6px;background:var(--orange);color:var(--bg);border:2px solid white;cursor:pointer;box-shadow:2px 2px 0 rgba(0,0,0,.3);white-space:nowrap">✅ ASISTIRÉ</button>`:""}
+          </div>
         </div>
       </div>`;
     });
