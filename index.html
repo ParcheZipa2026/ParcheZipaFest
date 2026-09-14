@@ -393,8 +393,8 @@ a{color:inherit;text-decoration:none}
           <h3 style="font-family:var(--font-d);font-size:34px;color:var(--white);letter-spacing:.02em;line-height:1;margin-bottom:8px;">MURAL ON</h3>
           <p style="font-family:var(--font-h);font-size:13px;font-weight:600;color:var(--muted);margin-bottom:16px;">Concurso de Muralismo</p>
           <div style="background:rgba(96,227,95,.12);border:1px solid rgba(96,227,95,.25);border-radius:100px;padding:6px 16px;display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;">
-            <span style="width:8px;height:8px;border-radius:50%;background:var(--green);animation:blink 1.5s infinite;flex-shrink:0;"></span>
-            <span style="font-family:var(--font-h);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);">INSCRIPCIONES ABIERTAS</span>
+            <span style="width:8px;height:8px;border-radius:50%;background:#a78bfa;animation:blink 1.5s infinite;flex-shrink:0;"></span>
+            <span style="font-family:var(--font-h);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#a78bfa;">VOTACIONES ABIERTAS</span>
           </div>
         </div>
         <div style="padding:20px 24px;flex:1;display:flex;flex-direction:column;gap:14px;">
@@ -424,13 +424,13 @@ a{color:inherit;text-decoration:none}
               <span style="font-family:var(--font-h);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:rgba(255,255,255,.05);color:var(--muted);border:1px solid rgba(255,255,255,.1);">5. Votación</span>
             </div>
           </div>
-          <div style="background:rgba(250,51,8,.10);border:1px solid rgba(250,51,8,.3);border-radius:var(--r-md);padding:11px 14px;display:flex;flex-direction:column;gap:6px;margin-top:4px;">
-            <div style="display:flex;align-items:center;gap:8px;"><span>⏳</span><span style="font-family:var(--font-h);font-size:12px;font-weight:700;color:#FA3308;">INSCRIPCIONES hasta el 6 de septiembre</span></div>
-            <div style="display:flex;align-items:center;gap:8px;"><span>🗳️</span><span style="font-family:var(--font-h);font-size:12px;font-weight:700;color:var(--orange);">VOTACIONES: 7 al 14 de septiembre</span></div>
+          <div style="background:rgba(96,48,240,.12);border:1px solid rgba(96,48,240,.35);border-radius:var(--r-md);padding:11px 14px;display:flex;flex-direction:column;gap:6px;margin-top:4px;">
+            <div style="display:flex;align-items:center;gap:8px;"><span>🔴</span><span style="font-family:var(--font-h);font-size:12px;font-weight:700;color:#FA3308;text-decoration:line-through;">INSCRIPCIONES: cerradas (6 sep)</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:18px;">🗳️</span><span style="font-family:var(--font-h);font-size:13px;font-weight:800;color:#a78bfa;letter-spacing:.04em;">⚡ VOTACIONES EN CURSO: 7–14 sep</span></div>
           </div>
           <div style="margin-top:8px;">
-            <a href="https://forms.gle/ijVEzj5hJWQ1znVR7" target="_blank" class="btn btn-green" style="width:100%;justify-content:center;font-size:16px;">
-              📝 INSCRIBIRME
+            <a href="https://www.instagram.com/juventudeszipaquira" target="_blank" class="btn" style="width:100%;justify-content:center;font-size:15px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:white;border:3px solid white;box-shadow:3px 3px 0 rgba(0,0,0,.4);">
+              🗳️ VOTA EN NUESTRAS REDES
             </a>
           </div>
         </div>
@@ -687,15 +687,15 @@ const ACTS = [
     description:"El artista ganador será reconocido como Artista del Año en los Premios Juventud. Demuestra tu talento en el lienzo más grande de Zipaquirá.",
     requirements:"Por definir",
     targetAudience:"Jóvenes de 14 a 28 años",
-    status:"open", registrationOpen:true,
-    inscripcionUrl:"https://forms.gle/ijVEzj5hJWQ1znVR7",
+    status:"voting", registrationOpen:false,
+    inscripcionUrl:"",
     specialProcess:"mural-on", accentColor:"#60E35F", icon:"🎨",
     phases:[
-      {id:1,label:"Convocatoria",active:true},
+      {id:1,label:"Convocatoria",active:false},
       {id:2,label:"Postulaciones",active:false},
       {id:3,label:"Selección",active:false},
       {id:4,label:"Finalistas",active:false},
-      {id:5,label:"Votación",active:false}
+      {id:5,label:"Votación",active:true}
     ]
   },
   {
